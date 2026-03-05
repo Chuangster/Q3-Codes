@@ -1,0 +1,19 @@
+# Sample 2D Array Structure
+# Rows represent students, and columns represent subjects (Math, Science, English)
+test_scores = [
+    [85, 90, 78],  # Student 1
+    [88, 76, 95],  # Student 2
+    [92, 89, 84],  # Student 3
+    [75, 80, 70],  # Student 4
+    [90, 85, 88]   # Student 5
+]
+
+# Accessing a specific value (Student 3's Science score)
+print(test_scores[2][1])  # Output: 89
+
+# Updating a specific value (Student 4's Math score)
+test_scores[3][0] = 80
+
+# Summarizing the dataset (Calculating average score for each subject)
+average_scores = [sum(subject) / len(test_scores) for subject in zip(*test_scores)]
+print(average_scores)  # Output: Average scores for Math, Science, English
