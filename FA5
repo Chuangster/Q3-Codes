@@ -1,0 +1,19 @@
+# Step 1: Define names and steps
+names = ["Me", "Lia", "Jake"]
+steps = [
+    [4500, 5200, 4800, 5000, 5300],
+    [4000, 4100, 3900, 4200, 4600],
+    [6000, 5800, 5900, 6100, 6200]
+]
+
+# Step 2: Calculate total steps for each day
+total_steps_per_day = [sum(day_steps) for day_steps in zip(*steps)]
+
+# Step 3: Print the results for each day
+days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+for day, total in zip(days, total_steps_per_day):
+    print(f"Total steps for {day}: {total}")
+
+# Step 4: Identify the most active day overall
+most_active_day_index = total_steps_per_day.index(max(total_steps_per_day))
+print(f"The most active day overall is: {days[most_active_day_index]}")
