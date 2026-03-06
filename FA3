@@ -1,0 +1,23 @@
+# Sample 2D array representing scores of students in different subjects
+scores = [
+    [85, 90, 78],
+    [88, 76, 95],
+    [92, 89, 84],
+    [70, 80, 75]
+]
+
+# Print each row of the array clearly
+for i, row in enumerate(scores):
+    print(f"Scores for Student {i + 1}: {row}")
+
+    # Calculate total for each row
+    total = sum(row)
+    print(f"Total Score for Student {i + 1}: {total}")
+
+    # Calculate average for each row
+    average = total / len(row)
+    print(f"Average Score for Student {i + 1}: {average:.2f}")
+
+# Optionally: Find the maximum value in the entire dataset
+max_value = max(max(row) for row in scores)
+print(f"Maximum Score in the Dataset: {max_value}")
